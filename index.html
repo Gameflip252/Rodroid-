@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RoDroid - Browser OS Emulator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="assets/logo.svg" alt="RoDroid Logo" class="logo" />
+      <h1 class="title">RoDroid</h1>
+      <p class="subtitle">Run OSes and ISOs in your browser with style</p>
+    </header>
+    <main>
+      <div class="emulator-card">
+        <div id="screen-container">
+          <canvas id="screen" width="640" height="400"></canvas>
+        </div>
+        <div class="controls">
+          <input type="file" id="isoInput" accept=".iso,.img,.bin,.fd,.vhd" />
+          <button id="runBtn" class="animated-btn">Run ISO/IMG</button>
+          <button id="stopBtn" class="animated-btn secondary">Stop</button>
+        </div>
+        <div id="status" class="status-bar">Waiting for ISO/IMG file...</div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <a href="https://github.com/Gameflip252/RoDroid" target="_blank">View on GitHub</a>
+        &ndash; Powered by <a href="https://github.com/copy/v86" target="_blank">v86</a>
+      </p>
+    </footer>
+  </div>
+  <script src="https://unpkg.com/v86/build/v86.js"></script>
+  <script src="rodroid.js"></script>
+</body>
+</html>
